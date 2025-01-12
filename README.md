@@ -20,3 +20,15 @@ https://www.figma.com/design/JwD4qX7yLR9JUtXlE6LndT/Todo-List?node-id=0-1&m=dev&
 
 - git also never took any of my commits into this repository even though it is the one I have been commiting to so don't know what is going on there 🥰
 
+file:///Users/ciaranhayes/Documents/Todo%20List/
+
+## The SQL
+
+CREATE DATABASE mariadb;
+USE mariadb;
+CREATE TABLE tasks (
+    id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    task VARCHAR(100) NOT NULL,
+    description VARCHAR(200),
+    done TINYINT(1) DEFAULT 0
+);
