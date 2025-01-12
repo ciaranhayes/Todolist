@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #F3EDE0;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+h1, h2, h3 {
+  color: #333;
+}
+
+ul {
+  list-style-type: none;
+}
+
+li {
+  list-style-type: none;
+}
+
+.holder {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  max-width: 900px;
+  padding: 2rem 5rem;
+  background-color: #F6EBEB;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+.todoTitle {
+  text-align: center;
+}
+
+.todoTitle h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #ffd863;
+}
+
+.add {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.add:hover {
+  background-color: #5a54e5;
+}
+
+.addEditTasks {
+  background-color: #E4CDCD;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.addEditTasks h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.labels {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.labels label {
+  font-size: 1rem;
+  color: #555;
+}
+
+.labels input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.labels input:focus {
+  border-color: #6c63ff;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buttons button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+  background-color: #5a54e5;
+}
+
+.buttons button[value="delete"]:nth-child(2) {
+  background-color: #e74c3c;
+}
+
+.buttons button[value="done"]:nth-child(2) {
+  background-color: #4CAF50;
+}
+
+.buttons button[value='edit']:nth-child(2) {
+  background-color: #5a54e5;
+}
+
+.buttons button[value="orNot"]:nth-child(2) {
+  background-color: #E67E22;
+}
+
+.buttons button[value="delete"]:nth-child(2):hover {
+  background-color: #c0392b;
+}
+
+.buttons button[value="done"]:nth-child(2):hover {
+  background-color: #388E3C;
+}
+
+.buttons button[value='edit']:nth-child(2):hover {
+  background-color: #4340b0;
+}
+
+.buttons button[value='orNot']:nth-child(2):hover {
+  background-color: #D35400;
+}
+
+.currentTasks, .completedTasks {
+  background-color: #F6EBEB;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.currentTasks h2, .completedTasks h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.addedTask {
+  background-color: #FBE2E2;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.addedTask h3 {
+  color: #ff6363;
+  margin-bottom: 10px;
+}
+
+.addedTask p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.buttons form {
+  display: inline-block;
+}
+
+.addedTask .buttons button {
+  background-color: #6c63ff;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+.addedTask .buttons button:hover {
+  background-color: #5a54e5;
+}
+
+
+.addedTask .done {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.addedTask .done + p {
+  color: #bbb;
+}
+
+.addedTask .buttons button[type="submit"]:nth-child(3) {
+  background-color: #f44336;
+}
+
+.addedTask .buttons button[type="submit"]:nth-child(3):hover {
+  background-color: #e53935;
+}
+
+@media (max-width: 768px) {
+  .holder {
+      grid-template-columns: 1fr;
+  }
+  
+  .todoTitle h1 {
+      font-size: 2.5rem;
+  }
+  
+  .add {
+      width: 100%;
+      padding: 12px;
+  }
+  
+  .addEditTasks, .currentTasks, .completedTasks {
+      padding: 15px;
+  }
+  
+  .labels input {
+      font-size: 0.9rem;
+  }
+  
+  .buttons button {
+      padding: 8px 15px;
+      font-size: 0.9rem;
+  }
+}
