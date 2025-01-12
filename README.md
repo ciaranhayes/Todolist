@@ -18,5 +18,5 @@ Click on the Add button to insert a task name and description (you do not always
 ## Figma sketch and ER diagram
 https://www.figma.com/design/JwD4qX7yLR9JUtXlE6LndT/Todo-List?node-id=0-1&m=dev&t=I9D7jh6hEWcI9UN8-1
 
-
+- git also never took any of my commits into this repository even though it is the one I have been commiting to so don't know what is going on there 🥰
 
